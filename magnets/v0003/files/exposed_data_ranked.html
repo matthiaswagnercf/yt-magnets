@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exposed-Data Ranking: what breaches actually take, and what to change first · Breach Record</title>
+<meta name="description" content="The document, the decision, and what to do this weekend.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Exposed-Data Ranking: what breaches actually take, and what to change first">
+<meta property="og:description" content="The document, the decision, and what to do this weekend.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../../../site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a href="../../../index.html"><span class="mark">BR</span><span class="name">Breach Record</span></a>
+  <p class="tag">The document, the decision, and what to do this weekend.</p>
+</div></header>
+<main class="wrap">
+<h1>Exposed-Data Ranking: what breaches actually take, and what to change first</h1>
+<p>Built for the Breach Record video on the Have I Been Pwned corpus (1,036 breaches, pulled September 15, 2026). Free. The sheet version (CSV) has the full table.</p>
+<h2>Last 12 months (104 breaches dated Sept 2025 to Sept 2026), ranked by how often each item was taken</h2>
+<div class="tw"><table><thead><tr><th>#</th><th>What was taken</th><th>In how many of the 104</th><th>What to change first</th></tr></thead><tbody><tr><td>1</td><td>Email address</td><td>100%</td><td>Assume public. Harden what it unlocks: unique passwords, non-SMS second factor.</td></tr><tr><td>2</td><td>Name</td><td>80%</td><td>Nothing to change; assume known.</td></tr><tr><td>3</td><td>Phone number</td><td>62%</td><td>Move every two-factor code off SMS (app prompt or passkey). Set a carrier port-out PIN.</td></tr><tr><td>4</td><td>Physical address</td><td>58%</td><td>Freeze credit at all bureaus. Expect mail and &quot;we have your address&quot; scams.</td></tr><tr><td>5</td><td>Date of birth</td><td>26%</td><td>Freeze credit; it is a permanent identifier you cannot rotate.</td></tr><tr><td>6</td><td>Username</td><td>24%</td><td>Do not reuse one handle across bank and forum logins.</td></tr><tr><td>7</td><td>Password</td><td>17%</td><td>Never reuse. A manager makes every password unique without effort.</td></tr></tbody></table></div>
+<h2>The ten-year shift (share of breaches, by breach year)</h2>
+<div class="tw"><table><thead><tr><th>Year</th><th>Passwords</th><th>Phone numbers</th><th>Addresses</th></tr></thead><tbody><tr><td>2016</td><td>81%</td><td>14%</td><td>13%</td></tr><tr><td>2019</td><td>71%</td><td>37%</td><td>23%</td></tr><tr><td>2022</td><td>52%</td><td>34%</td><td>28%</td></tr><tr><td>2024</td><td>38%</td><td>48%</td><td>40%</td></tr><tr><td>2026 (to Sept)</td><td>14%</td><td>69%</td><td>61%</td></tr></tbody></table></div>
+<h2>All-time (1,036 breaches, 17.8 billion account records in total)</h2>
+<p>Email 99% · Passwords 65% · Names 54% · Usernames 47% · IP addresses 37% · Phone numbers 36% · Physical addresses 29% · Dates of birth 27%. Breaches exposing financial data (bank account numbers, card data, transactions): 57, covering 351 million accounts.</p>
+<h2>The 2026 list you should recognize (breach date, records, what was in it)</h2>
+<p>Under Armour (Nov 2025, 72.7M: names, DOB, purchases, no passwords) · Suno (Nov 2025, 55.3M: phones, addresses, partial card data) · Canadian Tire (Oct 2025, 38.3M: passwords, DOB, partial card data) · ADDI (Mar 2026, 34.5M: government IDs, income, credit scores) · Paidwork (Mar 2026, 23.3M: bank account numbers, transactions) · McGraw Hill (Apr 2026, 13.5M: phones, addresses) · Carhartt (Aug 2026, 12.9M: phones, addresses).</p>
+<h2>What this table cannot tell you</h2>
+<p>HIBP is a curated corpus of breaches that were loaded, not a census of every breach. &quot;Passwords&quot; counts hashed passwords too. The shift toward phones and addresses reflects what recent loaded breaches contained; it may also reflect which breaches get loaded. Washington State&#x27;s public notice register (atg.wa.gov) shows the same pattern in its &quot;Information Compromised&quot; column for 2026 notices.</p>
+<p>Sources: haveibeenpwned.com/api/v3/breaches (pulled 2026-09-15); atg.wa.gov/data-breach-notifications.</p>
+  <p class="foot">&copy; 2026 Breach Record &middot; <a href="../../../privacy.html">Privacy</a>
+     &middot; <a href="../../../terms.html">Terms</a>
+     &middot; <a href="https://www.youtube.com/@breachrecord">YouTube channel</a></p>
+</main>
+</body>
+</html>
