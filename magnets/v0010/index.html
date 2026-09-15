@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Password Reuse Calculator</title>
+<meta name="description" content="The formula, the two sourced inputs, a table you fill in with your own account count and your own k, and the one-afternoon plan that takes k to zero.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Password Reuse Calculator">
+<meta property="og:description" content="The formula, the two sourced inputs, a table you fill in with your own account count and your own k, and the one-afternoon plan that takes k to zero.">
+<meta property="og:type" content="website">
+<style>
+  :root{--ink:#16202b;--muted:#5b6b7b;--line:#dfe5ec;--bg:#f7f8fa;--card:#fff;--accent:#1d6fe0;--ok:#1f7a3f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;padding:40px 20px 64px}
+  .kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  h1{font-size:30px;line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+  .promise{font-size:18px;color:var(--muted);margin:0 0 26px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+  ul{margin:0 0 22px;padding-left:20px}
+  li{margin:0 0 8px}
+  label{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+  input[type=email],input[type=text]{width:100%;font:inherit;padding:13px 14px;border:1px solid #b8c2cc;border-radius:8px;background:#fff;color:var(--ink)}
+  input:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .field{margin:0 0 14px}
+  button{width:100%;font:inherit;font-size:17px;font-weight:650;padding:15px;border:0;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}
+  button[disabled]{opacity:.6;cursor:progress}
+  .consent{font-size:13px;color:var(--muted);margin:14px 0 0}
+  .consent a{color:var(--muted)}
+  .msg{margin:14px 0 0;font-size:15px;display:none}
+  .msg.err{display:block;color:#a12626}
+  .msg.ok{display:block;color:var(--ok)}
+  .foot{margin:28px 0 0;font-size:13px;color:var(--muted)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  @media (max-width:420px){h1{font-size:25px}.wrap{padding:28px 16px 48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">Free download &middot; password reuse</p>
+  <h1>Password Reuse Calculator</h1>
+  <p class="promise">The formula, the two sourced inputs, a table you fill in with your own account count and your own k, and the one-afternoon plan that takes k to zero.</p>
+
+  <div class="card">
+    <ul><li>The formula and the two sourced inputs</li><li>A table for your own account count and your own k</li><li>What moves the number: yours and theirs</li><li>The one-afternoon plan</li></ul>
+    <form id="f" novalidate>
+      <div class="field">
+        <label for="nom">First name <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+        <input id="nom" name="nom" type="text" autocomplete="given-name" maxlength="80">
+      </div>
+      <div class="field">
+        <label for="courriel">Email</label>
+        <input id="courriel" name="courriel" type="email" required autocomplete="email" maxlength="160" placeholder="you@example.com">
+      </div>
+      <input id="magnet_id" name="magnet_id" type="hidden" value="v0010">
+      <div class="hp" aria-hidden="true">
+        <label for="site_web">Leave this field empty</label>
+        <input id="site_web" name="site_web" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button id="b" type="submit">Send it to me</button>
+      <p class="consent">One email with the download, then 5 short emails on this topic. Unsubscribe in one click. <a href="https://matthiaswagnercf.github.io/yt-magnets/privacy.html">Privacy</a></p>
+      <p class="msg" id="m"></p>
+    </form>
+  </div>
+
+  <p class="foot">Some links are affiliate links; I may earn a commission at no extra cost to you.</p>
+  <p class="foot">&copy; 2026 Breach Record &middot; <a href="https://matthiaswagnercf.github.io/yt-magnets/privacy.html">Privacy</a></p>
+</div>
+<script>
+(function () {
+  var ENDPOINT = "https://matthias-wagner-guitar--cf-leads-web.modal.run/lead/yt-autopilot";
+  var THANKYOU = "https://matthiaswagnercf.github.io/yt-magnets/magnets/v0010/thankyou.html";
+  var f = document.getElementById("f"), b = document.getElementById("b"), m = document.getElementById("m");
+  function show(kind, text) { m.className = "msg " + kind; m.textContent = text; }
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = document.getElementById("courriel").value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) { show("err", "That email address looks incomplete."); return; }
+    b.disabled = true; show("ok", "Sending...");
+    var payload = {
+      courriel: email,
+      nom: document.getElementById("nom").value.trim(),
+      site_web: document.getElementById("site_web").value,
+      magnet_id: ((document.getElementById("magnet_id") || {}).value || "v0010"),
+      type_inspection: "password-reuse-calculator",
+      municipalite: "v0010",
+      page: "https://matthiaswagnercf.github.io/yt-magnets/magnets/v0010/",
+      message: "lead magnet opt-in | video v0010 | consent given on the page"
+    };
+    fetch(ENDPOINT, {
+      method: "POST", mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      if (!r.ok) { throw new Error("HTTP " + r.status); }
+      window.location.href = THANKYOU;
+    }).catch(function () {
+      b.disabled = false;
+      show("err", "That did not go through. Email matthias.wagner.guitar@gmail.com and I will send it to you directly.");
+    });
+  });
+})();
+</script>
+</body>
+</html>
