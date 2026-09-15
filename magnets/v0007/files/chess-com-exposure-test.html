@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chess.com Exposure Test · Breach Record</title>
+<meta name="description" content="The three-minute test on one printable card: the two searches, the data classes that matter, the order to change things in, and the three Chess.com incidents side by side with their sources.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Chess.com Exposure Test">
+<meta property="og:description" content="The three-minute test on one printable card: the two searches, the data classes that matter, the order to change things in, and the three Chess.com incidents side by side with their sources.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../../../site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a href="../../../index.html"><span class="mark">BR</span><span class="name">Breach Record</span></a>
+  <p class="tag">The document, the decision, and what to do this weekend.</p>
+</div></header>
+<main class="wrap">
+<h1>Chess.com Exposure Test</h1>
+<p>Built for the Breach Record video on the Have I Been Pwned record &quot;Chess.com (2026)&quot;, breach date August 3, 2026, added September 13, 2026, 4,653,212 accounts. Free.</p>
+<h2>The three-minute test</h2>
+<div class="tw"><table><thead><tr><th>Step</th><th>Do this</th><th>Read this</th><th>Then</th></tr></thead><tbody><tr><td>1</td><td>Search your email at haveibeenpwned.com</td><td>The data classes on each hit, not the count. &quot;Email addresses, Geographic locations, Names, Usernames&quot; is scrape class (the Chess.com 2026 record). &quot;Passwords&quot;, &quot;Password hints&quot;, &quot;Security questions and answers&quot; is credential class</td><td>Every credential-class hit names a password that is burned</td></tr><tr><td>2</td><td>Check the password you used on Chess.com at haveibeenpwned.com/Passwords</td><td>HIBP&#x27;s API sends only &quot;the first 5 characters of either a SHA-1 or an NTLM hash&quot;; the password itself stays on your machine</td><td>Found means &quot;previously appeared in a data breach and should never be used&quot;</td></tr><tr><td>3</td><td>Ask where else that password lives</td><td>Your email account and anything that moves money come first</td><td>Change it there first, then everywhere else</td></tr><tr><td>4</td><td>Treat any &quot;Chess.com&quot; email that asks you to log in as bait</td><td>The scrape gives a sender your name, username, country, rating and last-login date next to your address</td><td>Type chess.com yourself; never follow the link</td></tr></tbody></table></div>
+<h2>What the 2026 file is, by the record</h2>
+<div class="tw"><table><thead><tr><th>Item</th><th>Figure</th><th>Source</th></tr></thead><tbody><tr><td>Rows in the file</td><td>7,337,395 (15.5 GB, 38 fields per record)</td><td>Security Affairs, Aug 14, 2026</td></tr><tr><td>Unique email addresses</td><td>4,653,212</td><td>HIBP record Chess2026</td></tr><tr><td>Addresses already in earlier breaches</td><td>99% (about 46,500 were new to the corpus)</td><td>HIBP record; share computed</td></tr><tr><td>Passwords or password hashes</td><td>None in the file</td><td>Security Affairs; Techlicious, Aug 14, 2026</td></tr><tr><td>Evidence of scraping</td><td>Nine daily batches; about 7.4% of records appear twice; timestamps in record IDs match registration dates</td><td>Security Affairs</td></tr><tr><td>Evidence of more than public scraping</td><td>Internal ad-audience segment labels, &quot;not exposed through chess.com&#x27;s public API&quot;</td><td>Security Affairs</td></tr><tr><td>Chess.com statement on the 2026 file</td><td>None found in the sources read; the help-support forum thread holds user posts only</td><td>Chess.com forum; Techlicious</td></tr></tbody></table></div>
+<h2>Three Chess.com incidents, side by side</h2>
+<div class="tw"><table><thead><tr><th></th><th>Nov 2023 scrape</th><th>Jun 2025 breach</th><th>Aug 2026 scrape</th></tr></thead><tbody><tr><td>People</td><td>1,274,077</td><td>4,541</td><td>4,653,212</td></tr><tr><td>Passwords</td><td>No</td><td>Not stated</td><td>No</td></tr><tr><td>What was taken</td><td>Email, name, username, location</td><td>Names and identifiers in a third-party file transfer tool (access Jun 5 and 18, found Jun 19)</td><td>Email, name, username, country, ratings, dates</td></tr><tr><td>Chess.com&#x27;s response</td><td>&quot;This was NOT a data breach&quot;</td><td>Letters Sep 3, 2025; 12 months of IDX identity protection</td><td>None found</td></tr><tr><td>Source</td><td>HIBP record Chess</td><td>Maine AG filing via CyberInsider, Sep 4, 2025</td><td>HIBP record Chess2026</td></tr></tbody></table></div>
+<h2>Why HIBP calls a scrape a breach</h2>
+<p>Troy Hunt, who runs the database, wrote in 2021: &quot;A data breach occurs when information is obtained by an unauthorised party in a fashion in which it was not intended to be made available.&quot; HIBP&#x27;s API defines a breach as &quot;an instance of a system having been compromised by an attacker and the data disclosed.&quot; Read the data classes; the word alone does not tell you whether a password moved.</p>
+<p>NIST SP 800-63B, 5.1.1.2, on what a site should do with your new password: &quot;verifiers SHALL compare the prospective secrets against a list that contains values known to be commonly-used, expected, or compromised,&quot; starting with &quot;passwords obtained from previous breach corpuses.&quot; Most sites do not; step 2 does it for you.</p>
+<h2>What this cannot tell you</h2>
+<p>Whether your specific row carried an email address (about a quarter of rows did not). Whether Chess.com will say anything about the 2026 file; none of the sources read had a statement. The 2025 breach figures come from a report citing the Maine filing; the filing itself sits behind a login.</p>
+<p>Sources: HIBP breach record, Chess.com (2026) (https://haveibeenpwned.com/api/v3/breach/Chess2026); HIBP breach page (https://haveibeenpwned.com/Breach/Chess2026); HIBP breach record, Chess.com (2023) (https://haveibeenpwned.com/api/v3/breach/Chess); HIBP Pwned Passwords (https://haveibeenpwned.com/Passwords); HIBP API v3 (https://haveibeenpwned.com/API/v3); HIBP FAQs (https://haveibeenpwned.com/FAQs); Security Affairs, Aug 14, 2026 (https://securityaffairs.com/197174/breaking-news/chess-com-leak-exposes-7-3-million-users-evidence-points-to-scraping.html); Techlicious, Aug 14, 2026 (https://www.techlicious.com/blog/7-million-chess-com-account-exposed-in-new-data-leak/); Troy Hunt, When is a scrape a breach?, Dec 16, 2021 (https://www.troyhunt.com/when-is-a-scrape-a-breach/); CyberInsider on the Maine filing, Sep 4, 2025 (https://cyberinsider.com/chess-com-discloses-data-breach-from-3rd-party-system-compromise/); Chess.com help-support forum thread (https://www.chess.com/forum/view/help-support/data-breach); NIST SP 800-63B (https://pages.nist.gov/800-63-3/sp800-63b.html).</p>
+  <p class="foot">&copy; 2026 Breach Record &middot; <a href="../../../privacy.html">Privacy</a>
+     &middot; <a href="../../../terms.html">Terms</a>
+     &middot; <a href="https://www.youtube.com/@breachrecord">YouTube channel</a></p>
+</main>
+</body>
+</html>
