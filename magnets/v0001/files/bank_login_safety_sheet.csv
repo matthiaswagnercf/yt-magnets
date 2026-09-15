@@ -1,0 +1,7 @@
+check,question,why,source
+1,Did you arrive from an ad (Sponsored/Ad label)?,Criminals bought search ads that mimicked bank ads and led to fake bank sites,DOJ 2025-12-22
+2,Is the address exactly your bank's domain before the first slash?,Look-alike domains differ by one character,FBI I-122122-PSA
+3,Did you type the address or use a bookmark?,Both agencies recommend bookmarks or typing instead of search results,DOJ; FBI
+4,Does the login ask for anything new (full card number PIN unsolicited code)?,Harvest pages add fields the real site lacks,DOJ
+5,Is your second factor a texted code?,Prefer app prompts or passkeys where offered,FBI
+6,Are transaction alerts on?,Funds were drained after login; alerts are the same-day catch,DOJ
