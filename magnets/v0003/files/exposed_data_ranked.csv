@@ -1,0 +1,13 @@
+rank,data_class,breaches_all_time,share_all_time,accounts_all_time,breaches_last_12mo,share_last_12mo,what_to_change_first
+1,Email addresses,1029,99%,17776810141,104,100%,"Unique email per important account (aliases), or accept it is public and harden what it unlocks"
+2,Passwords,674,65%,11795478211,18,17%,Never reuse; a manager makes every password unique automatically
+3,Names,556,54%,7845198089,83,80%,Nothing to change; assume known
+4,Usernames,484,47%,4553184988,25,24%,Do not reuse the same handle for bank and forum logins
+5,IP addresses,387,37%,3641030042,15,14%,Nothing to change; rotates
+6,Phone numbers,373,36%,5366696219,65,62%,Move 2FA off SMS to an app or passkey; carrier port-out lock
+7,Physical addresses,301,29%,3610890464,60,58%,Freeze credit; watch for mail-based scams
+8,Dates of birth,284,27%,3864473775,27,26%,Freeze credit; DOB is a permanent identifier
+9,Genders,196,19%,3870050180,21,20%,Nothing
+10,Geographic locations,149,14%,3964198619,16,15%,Nothing
+11,Purchases,87,8%,412580180,15,14%,Watch for 'your order' phishing that cites real purchases
+12,Website activity,77,7%,283619438,0,0%,Nothing
